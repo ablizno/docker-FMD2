@@ -1,4 +1,4 @@
-This Fork is to keep this Project going and FMD2 updated.
+I no longer use this, so this is now archived, slightly more modern then the Original from Banh
 
 ## Descriptions
 
