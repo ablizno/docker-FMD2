@@ -3,7 +3,7 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntunoble
 ARG FMD2_VERSION="2.0.34.5"
 
 LABEL \
-  maintainer="mail@suki.buzz"
+  maintainer="ablizno"
 
 ENV \
   WINEDLLOVERRIDES="mscoree,mshtml=" \
