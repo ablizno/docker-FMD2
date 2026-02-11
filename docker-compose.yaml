@@ -5,7 +5,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
+      - TZ=America/New_York
       - UMASK=022
       - THRESHOLD_MINUTES=3
       - TRANSFER_FILE_TYPE=.cbz
