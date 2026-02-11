@@ -1,4 +1,5 @@
-#WIP
+# WIP
+
 This fork is a WIP
 
 ## Descriptions
@@ -21,19 +22,19 @@ Make sure to configure it using the 'web' ui.
 ```yaml
 services:
   fmd2:
-    image: sillysuki/fmd2:latest
+    image: ablizno/fmd2:latest
     container_name: fmd2
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Europe/Berlin
-      - UMASK=002
+      - TZ=America/New_York
+      - UMASK=022
       - THRESHOLD_MINUTES=3
       - TRANSFER_FILE_TYPE=.cbz
     ports:
       - 3000:3000
     volumes:
-      - ./fmd2:/app/FMD2/userdata
+      - ./fmd:/app/FMD2/userdata
       - ./manga:/downloads
     restart: unless-stopped
 ```
