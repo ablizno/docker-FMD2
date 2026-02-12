@@ -1,6 +1,6 @@
 # WIP
 
-This fork is a WIP
+Currently works as intended but is very much a WIP
 
 Docker container for https://github.com/dazedcat19/FMD2
 
