@@ -8,8 +8,6 @@ Docker container for https://github.com/dazedcat19/FMD2
 
 Dockerized FMD2 (Windows with Wine) using VNC, noVNC and webSocketify to display GUI on a webpage.
 
-Websites protected with Cloudflare do not work with this, FlareSolverr doesnt work with wine.
-
 https://hub.docker.com/r/docker/ablizno/fmd2
 
 Make sure to configure it using the 'web' ui.
@@ -38,8 +36,25 @@ services:
     volumes:
       - ./fmd:/app/FMD2/userdata
       - ./manga:/downloads
+      #Needed for Flaresolverr to work
+      - ./websitebypass_config.json:/app/FMD2/lua/websitebypass/websitebypass_config.json
     restart: unless-stopped
 ```
+## Flaresolverr
+
+In order for Flaresolverr to work, you must have the Flaresolverr container and FMD2 on the same network.
+Create a file named `websitebypass_config.json` with the following contents:
+
+```json
+{
+    "use_webdriver": true,
+    "debug": false,
+    "flaresolverr_port": 8191,
+    "testing": false,
+    "flaresolverr_ip": "flaresolverr"
+}
+```
+This must be passed to the container via the compose file.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
