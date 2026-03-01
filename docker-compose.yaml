@@ -14,4 +14,5 @@ services:
     volumes:
       - /path/to/appdata:/app/FMD2/userdata
       - /path/to/manga:/downloads
+      - /path/to/websitebypass_config.json:/app/FMD2/lua/websitebypass/websitebypass_config.json
     restart: unless-stopped
