@@ -56,5 +56,7 @@ Create a file named `websitebypass_config.json` with the following contents:
 ```
 This must be passed to the container via the compose file.
 
+> **Note:** Make sure `websitebypass_config.json` exists on the host before running `docker compose up`, otherwise Docker will create it as a directory instead of a file.
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
